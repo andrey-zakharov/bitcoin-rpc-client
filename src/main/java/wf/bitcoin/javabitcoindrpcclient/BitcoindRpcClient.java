@@ -334,7 +334,7 @@ public interface BitcoindRpcClient {
   /**
    * The addnode RPC attempts to add or remove a node from the addnode list, or to try a connection to a node once.
    * 
-   * @param node The node to add as a string in the form of <IP address>:<port>.
+   * @param node The node to add as a string in the form of &lt;IP address>:&lt;port>.
    * @param command What to do with the IP address above. 
    * 
    * @see <a href="https://bitcoin.org/en/developer-reference#addnode">addnode</a>
@@ -346,7 +346,7 @@ public interface BitcoindRpcClient {
    * Only nodes which have been manually added using the addnode RPC will have their information displayed.
    * 
    * @param details Removed in Bitcoin Core 0.14.0
-   * @param node The node to get information about in the same <IP address>:<port> format as the addnode RPC.
+   * @param node The node to get information about in the same &lt;IP address>:&lt;port> format as the addnode RPC.
    * @return An array containing objects describing each added node.
    * 
    * @see <a href="https://bitcoin.org/en/developer-reference#getaddednodeinfo">getaddednodeinfo</a>
@@ -1283,7 +1283,7 @@ public interface BitcoindRpcClient {
     <li>sh(multi(&lt;n&gt;,&lt;pubkey&gt;,&lt;pubkey&gt;,...)) P2SH-multisig outputs for the given threshold and pubkeys</li>
     </ul>
   * 
-  * In the above, <pubkey> either refers to a fixed public key in hexadecimal notation, or to an xpub/xprv optionally followed by one
+  * In the above, &lt;pubkey> either refers to a fixed public key in hexadecimal notation, or to an xpub/xprv optionally followed by one
   * or more path elements separated by "/", and optionally ending in "/*" (unhardened), or "/*'" or "/*h" (hardened) to specify all
   * unhardened or hardened child keys.
   * In the latter case, a range needs to be specified by below if different from 1000.
@@ -1327,7 +1327,7 @@ public interface BitcoindRpcClient {
   * Convenience method for retrieving UTXO SET (P2PK, P2PKH, P2WPKH, and
   * P2SH-P2WPKH outputs) for a given pubkey.
   * 
-  * <pubkey> either refers to a fixed public key in hexadecimal notation, or to
+  * &lt;pubkey> either refers to a fixed public key in hexadecimal notation, or to
   * an xpub/xprv optionally followed by one or more path elements separated by
   * "/", and optionally ending in "/*" (unhardened), or "/*'" or "/*h" (hardened)
   * to specify all unhardened or hardened child keys.
@@ -2116,13 +2116,13 @@ public interface BitcoindRpcClient {
    * <br><br>
    * But it can also be used as a transaction input (therefore implements {@link TxInput}).
    * 
-   * @see {@link BitcoindRpcClient#listUnspent()}
+   * @see BitcoindRpcClient#listUnspent()
 
    */
   interface Unspent extends TxInput, TxOutput, Serializable {
 	
 	  /**
-	   * @deprecatd Use {@link TxOutput#address()} instead
+	   * @deprecated Use {@link TxOutput#address()} instead
 	   */
 	@Deprecated
     String account();

@@ -23,7 +23,7 @@ import java.util.Map;
  * an object represents the error in a bitcoind rpc call
  * 
  * @author frankchen
- * @create 2018年7月9日 下午8:58:13
+ * create 2018年7月9日 下午8:58:13
  */
 public class BitcoinRPCError {
     private int code;

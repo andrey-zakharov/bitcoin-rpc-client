@@ -20,7 +20,7 @@ package wf.bitcoin.javabitcoindrpcclient;
 /**
  * error code returned from bitcoind
  * @author frankchen
- * @create 2018年7月9日 下午8:58:52
+ * create 2018年7月9日 下午8:58:52
  */
 public class BitcoinRPCErrorCode {
     public static final int RPC_MISC_ERROR                  = -1 ;  //!< std::exception thrown in command handling
